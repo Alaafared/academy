@@ -46,19 +46,19 @@ export default function TestScreen({ testType, onTestComplete, onBack }) {
     setIsCorrect(correct);
     setShowFeedback(true);
 
-    // if (correct) {
-    //   setScore(prev => prev + 1);
-    //   toast({
-    //     title: "إجابة صحيحة! 🎉",
-    //     // description: "أحسنت!",
-    //   });
-    // } else {
-    //   toast({
-    //     title: "إجابة خاطئة ❌",
-    //     // description: "حاول مرة أخرى في المرات القادمة",
-    //     variant: "destructive"
-    //   });
-    // }
+    if (correct) {
+      setScore(prev => prev + 1);
+      toast({
+        title: "إجابة صحيحة! 🎉",
+        // description: "أحسنت!",
+      });
+    } else {
+      toast({
+        title: "إجابة خاطئة ❌",
+        // description: "حاول مرة أخرى في المرات القادمة",
+        variant: "destructive"
+      });
+    }
   };
 
   const handleNextQuestion = () => {
@@ -227,12 +227,12 @@ export default function TestScreen({ testType, onTestComplete, onBack }) {
           transition={{ delay: 0.3 }}
           className="mt-6 text-center"
         >
-          {/* <div className="bg-white/10 backdrop-blur-lg rounded-xl p-4 inline-block border border-white/20">
+          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-4 inline-block border border-white/20">
             <p className="text-inherit/70 text-sm">النتيجة الحالية</p>
             <p className="text-2xl font-bold text-inherit">
               {score} / {currentQuestionIndex + (showFeedback ? 1 : 0)}
             </p>
-          </div> */}
+          </div>
         </motion.div>
       </div>
     </div>
