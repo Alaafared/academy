@@ -50,12 +50,12 @@ export default function TestScreen({ testType, onTestComplete, onBack }) {
       setScore(prev => prev + 1);
       toast({
         title: "إجابة صحيحة! 🎉",
-        description:currentQuestion.explanation || "أحسنت!",
+        description: "أحسنت!",
       });
     } else {
       toast({
         title: "إجابة خاطئة ❌",
-        description:currentQuestion.explanation || "حاول مرة أخرى في المرات القادمة",
+        description: "حاول مرة أخرى في المرات القادمة",
         variant: "destructive"
       });
     }
