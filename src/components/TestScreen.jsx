@@ -46,19 +46,19 @@ export default function TestScreen({ testType, onTestComplete, onBack }) {
     setIsCorrect(correct);
     setShowFeedback(true);
 
-    if (correct) {
-      setScore(prev => prev + 1);
-      toast({
-        title: "إجابة صحيحة! 🎉",
-        description: "أحسنت!",
-      });
-    } else {
-      toast({
-        title: "إجابة خاطئة ❌",
-        description: "حاول مرة أخرى في المرات القادمة",
-        variant: "destructive"
-      });
-    }
+    // if (correct) {
+    //   setScore(prev => prev + 1);
+    //   toast({
+    //     title: "إجابة صحيحة! 🎉",
+    //     // description: "أحسنت!",
+    //   });
+    // } else {
+    //   toast({
+    //     title: "إجابة خاطئة ❌",
+    //     // description: "حاول مرة أخرى في المرات القادمة",
+    //     variant: "destructive"
+    //   });
+    // }
   };
 
   const handleNextQuestion = () => {
