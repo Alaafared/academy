@@ -28,7 +28,7 @@ export default function Dashboard({
     { id: 'post-test', name: 'الاختبار البعدي', icon: Trophy, color: 'from-green-500 to-emerald-500' }
   ];
 
-  const dailyTests = Array.from({ length: 10 }, (_, i) => ({
+  const dailyTests = Array.from({ length: 3 }, (_, i) => ({
     id: `day-${i + 1}`,
     name: `اليوم ${i + 1}`,
     icon: Calendar,
@@ -214,7 +214,7 @@ export default function Dashboard({
           transition={{ delay: 0.4 }}
         >
           <h2 className="text-2xl font-bold text-inherit mb-6">الاختبارات اليومية</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+          <div className="grid grid-cols-2 2xl:grid-cols-3 md:grid-cols-3 gap-3 text-2xl font-bold">
             {dailyTests.map((test, index) => {
               const status = getTestStatus(test.id);
               const result = testResults[test.id];
