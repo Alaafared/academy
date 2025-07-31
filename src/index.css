@@ -1,0 +1,180 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap');
+
+body {
+  font-family: 'Cairo', sans-serif;
+  direction: rtl;
+}
+
+.theme-dark {
+  @apply bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white;
+}
+
+.theme-light {
+  @apply bg-gradient-to-br from-blue-100 via-purple-100 to-indigo-100 text-gray-800;
+}
+
+.theme-light .text-blue-200 {
+  @apply text-blue-600;
+}
+
+.theme-light .text-green-200 {
+  @apply text-green-600;
+}
+
+.theme-light .text-purple-200 {
+  @apply text-purple-600;
+}
+
+.theme-light .text-orange-200 {
+  @apply text-orange-600;
+}
+
+.theme-light .text-gray-300 {
+  @apply text-gray-600;
+}
+
+.theme-light .text-inherit {
+  @apply text-gray-800;
+}
+
+.theme-light .text-inherit\/80 {
+  @apply text-gray-800/80;
+}
+
+.theme-light .text-inherit\/70 {
+  @apply text-gray-800/70;
+}
+
+.theme-light .text-inherit\/60 {
+  @apply text-gray-800/60;
+}
+
+.theme-light .bg-white\/10 {
+  @apply bg-white/60;
+}
+
+.theme-light .border-white\/20 {
+  @apply border-gray-300/50;
+}
+
+.theme-light .border-white\/30 {
+  @apply border-gray-400/50;
+}
+
+.theme-light .hover\:bg-white\/10:hover {
+  @apply hover:bg-white/80;
+}
+
+.theme-light .hover\:bg-white\/20:hover {
+  @apply hover:bg-white/90;
+}
+
+.theme-light .placeholder-white\/60::placeholder {
+  @apply placeholder-gray-500/80;
+}
+
+.theme-light .text-green-100 {
+  @apply text-green-800;
+}
+
+.theme-light .text-red-100 {
+  @apply text-red-800;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.theme-light ::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+.theme-light ::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.theme-light ::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+
+/* Animation classes */
+.animate-pulse-slow {
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-bounce-slow {
+  animation: bounce 2s infinite;
+}
+
+/* Custom button hover effects */
+.btn-hover-scale {
+  transition: transform 0.2s ease-in-out;
+}
+
+.btn-hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Text selection */
+::selection {
+  background: rgba(59, 130, 246, 0.3);
+  color: white;
+}
+
+.theme-light ::selection {
+  color: #1f2937;
+}
+
+/* Focus styles */
+button:focus,
+input:focus {
+  outline: 2px solid rgba(59, 130, 246, 0.5);
+  outline-offset: 2px;
+}
+
+/* Loading animation */
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  background-size: 200px 100%;
+  animation: shimmer 1.5s infinite;
+}
