@@ -10,7 +10,7 @@ export default function TestScreen({ testType, onTestComplete, onBack }) {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [score, setScore] = useState(0);
-  const [timeLeft, setTimeLeft] = useState(3600); // 60 minutes
+  const [timeLeft, setTimeLeft] = useState(5400); // 60 minutes
   const [startTime] = useState(Date.now());
   const [showFeedback, setShowFeedback] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
